@@ -3,11 +3,10 @@ import env from "dotenv";
 env.config();
 
 const URL: string = process.env.MONGO || "";
-
-export const connectDataBase = async () => {
+export const connectDatabase = async () => {
   try {
     await connect(URL);
   } catch (err) {
-    console.log("db holboohd aldaa garlaa");
+    console.log("DB not connect");
   }
 };

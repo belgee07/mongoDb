@@ -1,7 +1,7 @@
 import express from "express";
 import cors from "cors";
 import { UserModel } from "./database/models/users.model";
-import { connectDatabase } from "../config";
+import { connectDatabase } from "./database/config";
 
 const app = express();
 app.use(express.json());
@@ -16,10 +16,10 @@ app.get("/", async (req, res) => {
     email: "qwerty",
   });
 
-  const result = await UserModel.findById("670c9b610a0ed2d105de4735");
+  const result = await UserModel.findById("6711cf5cc8cd97905fcc2005");
 
-  await UserModel.findByIdAndUpdate("670c9b610a0ed2d105de4735", {
-    email: "uzkhu",
+  await UserModel.findByIdAndUpdate("6711cf5cc8cd97905fcc2005", {
+    email: "uzkhugerSoliv",
   });
 
   res.send("success");
