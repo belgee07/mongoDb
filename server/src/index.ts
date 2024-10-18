@@ -1,7 +1,7 @@
 import express from "express";
 import cors from "cors";
-import { UserModel } from "../database/models/users.model";
-import { connectDatabase } from "../database/config";
+import { UserModel } from "./database/models/users.model";
+import { connectDatabase } from "../config";
 
 const app = express();
 app.use(express.json());
