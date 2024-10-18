@@ -11,20 +11,20 @@ connectDatabase();
 
 app.get("/", async (req, res) => {
   await UserModel.create({
-    firstName: "qw",
-    lastName: "aa",
+    firstName: "belgutei",
+    lastName: "nagaan",
     email: "qwerty",
   });
 
   const result = await UserModel.findById("670c9b610a0ed2d105de4735");
 
   await UserModel.findByIdAndUpdate("670c9b610a0ed2d105de4735", {
-    email: "belge0722",
+    email: "uzkhu",
   });
 
   res.send("success");
 });
 
-app.listen(8000, () => {
-  console.log("http://localhost:8000");
+app.listen(() => {
+  console.log("https://mongodb-5x5r.onrender.com");
 });
